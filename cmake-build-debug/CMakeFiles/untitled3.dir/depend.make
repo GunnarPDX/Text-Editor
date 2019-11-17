@@ -4,11 +4,16 @@
 CMakeFiles/untitled3.dir/Inheritance.cpp.o: ../Inheritance.cpp
 CMakeFiles/untitled3.dir/Inheritance.cpp.o: ../Inheritance.h
 
+CMakeFiles/untitled3.dir/String.cpp.o: ../String.cpp
+CMakeFiles/untitled3.dir/String.cpp.o: ../String.h
+
 CMakeFiles/untitled3.dir/Tree.cpp.o: ../Inheritance.h
+CMakeFiles/untitled3.dir/Tree.cpp.o: ../String.h
 CMakeFiles/untitled3.dir/Tree.cpp.o: ../Tree.cpp
 CMakeFiles/untitled3.dir/Tree.cpp.o: ../Tree.h
 
 CMakeFiles/untitled3.dir/main.cpp.o: ../Inheritance.h
+CMakeFiles/untitled3.dir/main.cpp.o: ../String.h
 CMakeFiles/untitled3.dir/main.cpp.o: ../Tree.h
 CMakeFiles/untitled3.dir/main.cpp.o: ../main.cpp
 

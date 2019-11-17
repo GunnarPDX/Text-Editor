@@ -3,4 +3,4 @@ project(untitled3)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(untitled3 main.cpp Tree.cpp Tree.h Inheritance.cpp Inheritance.h)
+add_executable(untitled3 main.cpp Tree.cpp Tree.h Inheritance.cpp Inheritance.h String.cpp String.h)

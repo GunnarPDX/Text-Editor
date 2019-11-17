@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled3.dir/main.cpp.o"
   "CMakeFiles/untitled3.dir/Tree.cpp.o"
   "CMakeFiles/untitled3.dir/Inheritance.cpp.o"
+  "CMakeFiles/untitled3.dir/String.cpp.o"
   "untitled3.pdb"
   "untitled3"
 )
