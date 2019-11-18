@@ -22,6 +22,7 @@ public:
 
     Reserved *& getData2();
     void setData2(Reserved *& newData);
+    void deleteData2();
     bool isData2();
 
     Node *& getLeft();
@@ -57,6 +58,9 @@ protected:
 
     void display(Node * root);
     void removeAll(Node * root);
+    void insert(Node * & root, Reserved * obj);
+    void insertLeft(Node * & root, Reserved * obj);
+    void insertRight(Node * & root, Reserved * obj);
 
 };
 
