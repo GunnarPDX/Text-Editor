@@ -6,7 +6,6 @@
 #define TREE_H
 
 #include "Inheritance.h"
-#include "String.h"
 
 
 class Node {
@@ -16,7 +15,6 @@ public:
     Node(Reserved * obj);
 
     ~Node();
-
 
     //getters and setters
 
