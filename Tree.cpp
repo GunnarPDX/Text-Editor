@@ -26,6 +26,7 @@ Node::Node(const Node & obj)
     right  = NULL;
 }
 
+/*
 Node::Node(Reserved * obj) // ?
 {
     if(!data1) data1 = obj;
@@ -35,12 +36,14 @@ Node::Node(Reserved * obj) // ?
     middle  = NULL;
     right  = NULL;
 }
+*/
 
 Node::~Node()
 {
     if(data1) delete data1;
     data1 = NULL;
     if(data2) delete data2;
+    data2 = NULL;
 
     left = NULL;
     middle  = NULL;
@@ -65,6 +68,11 @@ Reserved *& Node::getData2()
 void Node::setData2(Reserved *& newData)
 {
     data2 = newData;
+}
+
+bool Node::isData2()
+{
+    return data2 != NULL;
 }
 
 Node *& Node::getLeft()
@@ -101,17 +109,29 @@ void Node::setRight(Node * newNode)
 
 Tree::Tree()
 {
-
+    root = NULL;
 }
 
 Tree::~Tree()
 {
-
+    removeAll();
+    root = NULL;
 }
 
-int Tree::display()
+void Tree::display()
 {
+    display(root);
+}
 
+void Tree::display(Node * root)
+{
+    if(!root) return;
+    display(root->getLeft());
+    display(root->getMiddle());
+    display(root->getRight());
+
+    root->getData1()->print();
+    if(root->isData2())root->getData2()->print();
 }
 
 bool Tree::insert(Reserved * obj)
@@ -121,5 +141,20 @@ bool Tree::insert(Reserved * obj)
 
 void Tree::removeAll()
 {
+    removeAll(root);
+    root = NULL;
+}
 
+void Tree::removeAll(Node * root)
+{
+    if(!root) return;
+    removeAll(root->getLeft());
+    removeAll(root->getMiddle());
+    removeAll(root->getRight());
+
+    root->setLeft(NULL);
+    root->setMiddle(NULL);
+    root->setRight(NULL);
+    delete root;
+    root = NULL;
 }

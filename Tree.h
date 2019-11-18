@@ -12,7 +12,6 @@ class Node {
 public:
     Node();
     Node(const Node & obj);
-    Node(Reserved * obj);
 
     ~Node();
 
@@ -23,6 +22,7 @@ public:
 
     Reserved *& getData2();
     void setData2(Reserved *& newData);
+    bool isData2();
 
     Node *& getLeft();
     void setLeft(Node * newNode);
@@ -48,12 +48,15 @@ public:
     Tree();
     ~Tree();
 
-    int display();
+    void display();
     bool insert(Reserved * obj);
     void removeAll();
 
 protected:
     Node * root;
+
+    void display(Node * root);
+    void removeAll(Node * root);
 
 };
 
