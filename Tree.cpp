@@ -134,11 +134,6 @@ void Tree::display(Node * root)
     if(root->isData2())root->getData2()->print();
 }
 
-bool Tree::insert(Reserved * obj)
-{
-
-}
-
 void Tree::removeAll()
 {
     removeAll(root);
@@ -157,4 +152,73 @@ void Tree::removeAll(Node * root)
     root->setRight(NULL);
     delete root;
     root = NULL;
+}
+
+void Tree::insert(Reserved * obj)
+{
+    if(!root) //if root is empty
+    {
+        root = new Node();
+        root->setData1(obj);
+        return;
+    }
+    if(!root->getLeft() && !root->getMiddle() && !root->getRight()) //if no children
+    {
+        if(!root->isData2()) //if no second data member
+        {
+            if(root->getData1() < obj) //if root is smaller
+            {
+                root->setData2(obj);
+                return;
+            }
+            else //else switch data to correct sides
+            {
+                root->setData2(root->getData1());
+                root->setData1(obj);
+                return;
+            }
+        }
+        else //else push nodes down
+        {
+            if(obj > root->getData1())
+            {
+                Node * temp = new Node;
+                root->setLeft(temp);
+                temp->setData1(root->getData1());
+
+                if(obj > root->getData2())
+                {
+                    Node * temp2 = new Node;
+                    root->setRight(temp2);
+                    temp2->setData1(obj);
+
+                    root->setData1(root->getData2());
+                }
+                else
+                {
+                    //set data1 to obj
+                    //set right to data 2
+                }
+                //delete data 2
+                return;
+            }
+            else
+            {
+                //set left to obj
+                //set right to data2
+                //delete data2
+            }
+        }
+    }
+    if(!root->getMiddle()) //if no middle
+    {
+        //if 1 or 2 data members in node
+            //if 1 then move data so that there are 2 in any node
+            //else push new middle
+
+        //if
+
+    }
+
+    return;
 }

@@ -49,7 +49,7 @@ public:
     ~Tree();
 
     void display();
-    bool insert(Reserved * obj);
+    void insert(Reserved * obj);
     void removeAll();
 
 protected:

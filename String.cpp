@@ -25,7 +25,7 @@ String::~String()
 
 String & String::operator = (const String & obj)
 {
-    if(this == &obj) return *this;
+    if(this == & obj) return *this;
 
     delete [] string;
     length = obj.length;
@@ -34,14 +34,49 @@ String & String::operator = (const String & obj)
     return *this;
 }
 
+bool String::operator > (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) > 0) return true;
+    else return false;
+}
 
-String & String::operator = (const char * obj)
+bool String::operator < (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) < 0) return true;
+    else return false;
+}
+
+bool String::operator <= (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) <= 0) return true;
+    else return false;
+}
+
+bool String::operator >= (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) >= 0) return true;
+    else return false;
+}
+
+bool String::operator == (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) == 0) return true;
+    else return false;
+}
+
+bool String::operator != (const String & obj)const
+{
+    if(strcmp(this->string, obj.string) != 0) return true;
+    else return false;
+}
+
+String & String::operator = (const char * input)
 {
     if(string) delete [] string;
 
-    length = strlen(obj);
+    length = strlen(input);
     string = new char[length + 1];
-    strcpy(string, obj);
+    strcpy(string, input);
     return *this;
 }
 

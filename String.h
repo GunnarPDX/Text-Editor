@@ -17,12 +17,18 @@ class String
 {
 public:
     String();
-    String(const String &);
+    String(const String & obj);
     ~String();
-    String & operator = (const String &);
-    String & operator = (const char *);
-    friend ostream & operator << (ostream &, const String &);
-    friend istream & operator >> (istream &, String &);
+    String & operator = (const String & obj);
+    String & operator = (const char * input);
+    bool operator > (const String & obj)const;
+    bool operator < (const String & obj)const;
+    bool operator >= (const String & obj)const;
+    bool operator <= (const String & obj)const;
+    bool operator == (const String & obj)const;
+    bool operator != (const String & obj)const;
+    friend ostream & operator << (ostream & obj1, const String & obj2);
+    friend istream & operator >> (istream & obj1, String & obj2);
 
 
 private:

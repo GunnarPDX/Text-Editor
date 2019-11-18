@@ -19,6 +19,49 @@ void Reserved::print(){}
 
 void Reserved::highlight(){}
 
+bool Reserved::operator > (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters > obj.characters) return true;
+    else return false;
+}
+
+bool Reserved::operator < (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters < obj.characters) return true;
+    else return false;
+}
+
+bool Reserved::operator >= (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters >= obj.characters) return true;
+    else return false;
+}
+
+bool Reserved::operator <= (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters <= obj.characters) return true;
+    else return false;
+}
+
+bool Reserved::operator == (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters == obj.characters) return true;
+    else return false;
+}
+
+bool Reserved::operator != (const Reserved & obj)const
+{
+    if(this == & obj) return true;
+    if (this->characters != obj.characters) return true;
+    else return false;
+}
+
+
 //Word class methods
 
 Word::Word() : Reserved(){}

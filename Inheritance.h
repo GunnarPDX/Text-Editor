@@ -5,6 +5,7 @@
 #ifndef INHERITANCE_H
 #define INHERITANCE_H
 #include "String.h"
+#include <cstring>
 
 class Colors {
 public:
@@ -26,6 +27,13 @@ public:
 
     virtual void print() = 0; //pure virtual func
     virtual void highlight() = 0;
+
+    bool operator > (const Reserved & obj) const;
+    bool operator < (const Reserved & obj) const;
+    bool operator >= (const Reserved & obj) const;
+    bool operator <= (const Reserved & obj) const;
+    bool operator == (const Reserved & obj) const;
+    bool operator != (const Reserved & obj) const;
 
 protected:
     Colors color;
