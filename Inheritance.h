@@ -23,10 +23,10 @@ class Reserved {
 public:
     Reserved();
     Reserved(const String & input);
+    Reserved(const Reserved & obj);
     virtual ~Reserved();
 
     virtual void print() = 0; //pure virtual func
-    virtual void highlight() = 0;
 
     bool operator > (const Reserved & obj) const;
     bool operator < (const Reserved & obj) const;
@@ -38,6 +38,7 @@ public:
 protected:
     Colors color;
     String characters;
+    int highlight;
 };
 
 class Word : public Reserved { // ex : "if" "return" "int" "char" "false" etc...
@@ -49,7 +50,6 @@ public:
     void print();
 
 private:
-    int highlight = color.GREEN;
 
 };
 
@@ -64,7 +64,6 @@ public:
     int getColor(int input);
 
 private:
-    int highlight;
 
 };
 
@@ -79,7 +78,6 @@ public:
     void print();
 
 private:
-    int highlight = color.GREY;
 
 };
 

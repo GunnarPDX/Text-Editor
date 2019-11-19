@@ -22,7 +22,7 @@ public:
 
     Reserved *& getData2();
     void setData2(Reserved *& newData);
-    void deleteData2();
+    void nullifyData2();
     bool isData2();
 
     Node *& getLeft();

@@ -36,7 +36,10 @@ String & String::operator = (const String & obj)
 
 bool String::operator > (const String & obj)const
 {
-    if(strcmp(this->string, obj.string) > 0) return true;
+    if(strcmp(this->string, obj.string) > 0)
+    {
+        return true;
+    }
     else return false;
 }
 

@@ -13,11 +13,16 @@ Reserved::Reserved()
 
 Reserved::Reserved(const String &input) : characters(input){}
 
-Reserved::~Reserved(){}
+Reserved::Reserved(const Reserved & obj) : characters(obj.characters){}
+
+Reserved::~Reserved()
+{
+
+}
 
 void Reserved::print(){}
 
-void Reserved::highlight(){}
+//void Reserved::highlight(){}
 
 bool Reserved::operator > (const Reserved & obj)const
 {
@@ -64,9 +69,15 @@ bool Reserved::operator != (const Reserved & obj)const
 
 //Word class methods
 
-Word::Word() : Reserved(){}
+Word::Word() : Reserved()
+{
+    highlight = color.GREEN;
+}
 
-Word::Word(const String & input) : Reserved(input){}
+Word::Word(const String & input) : Reserved(input)
+{
+    highlight = color.GREEN;
+}
 
 Word::~Word(){}
 
@@ -112,9 +123,15 @@ void Symbol::print()
 
 //Comment class methods
 
-Comment::Comment() : Reserved() {}
+Comment::Comment() : Reserved()
+{
+    highlight = color.GREY;
+}
 
-Comment::Comment(String input) : Reserved(input) {}
+Comment::Comment(String input) : Reserved(input)
+{
+    highlight = color.GREY;
+}
 
 Comment::~Comment(){}
 

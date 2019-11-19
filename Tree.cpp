@@ -70,9 +70,8 @@ void Node::setData2(Reserved *& newData)
     data2 = newData;
 }
 
-void Node::deleteData2()
+void Node::nullifyData2()
 {
-    if(data2) delete data2;
     data2 = NULL;
 }
 
@@ -132,12 +131,20 @@ void Tree::display()
 void Tree::display(Node * root)
 {
     if(!root) return;
+
     display(root->getLeft());
+
+    if(root->getData1())
+    {
+        root->getData1()->print();
+    }
+    if(root->getData2())
+    {
+        root->getData2()->print();
+    }
+
     display(root->getMiddle());
     display(root->getRight());
-
-    root->getData1()->print();
-    if(root->isData2())root->getData2()->print();
 }
 
 void Tree::removeAll()
@@ -174,16 +181,17 @@ void Tree::insert(Node * & root, Reserved * obj)
     }
     else if(!root->getLeft() && !root->getMiddle() && !root->getRight()) //if no children
     {
+
         if(!root->isData2()) //if no second data member
         {
-            if(root->getData1() < obj) //if root is smaller
+            if(*root->getData1() < *obj) //if root is smaller
             {
                 root->setData2(obj);
             }
             else //else switch data to correct sides
             {
-                root->setData2(root->getData1());
-                root->setData1(obj);
+                root->setData2(root->getData1()); //set data2 to data1
+                root->setData1(obj); //set data1 to obj
             }
         }
         else //else push nodes down (root is full)
@@ -194,13 +202,13 @@ void Tree::insert(Node * & root, Reserved * obj)
             Node * temp2 = new Node;
             root->setRight(temp2);
 
-            if(obj > root->getData1())
+            if(*obj > *root->getData1())
             {
-                temp->setData1(root->getData1());
+                temp->setData1(root->getData1()); //set left to data 1
 
-                if(obj > root->getData2())
+                if(*obj > *root->getData2()) //if obj is largest
                 {
-                    temp2->setData1(obj); //set right to data1
+                    temp2->setData1(obj); //set right to obj
                     root->setData1(root->getData2()); //set data1 to data2
                 }
                 else
@@ -212,26 +220,26 @@ void Tree::insert(Node * & root, Reserved * obj)
             else
             {
                 temp->setData1(obj); //set left to obj
-                temp->setData1(root->getData2()); //set right to data2
+                temp2->setData1(root->getData2()); //set right to data2
             }
-            root->deleteData2(); //delete data 2
+            root->nullifyData2(); //nullify data 2
         }
     }
-    else if(obj < root->getData1() && root->getLeft()) //if there are children and obj goes to left
+    else if(*obj < *root->getData1() && root->getLeft()) //if there are children and obj goes to left
     {
         if(root->getLeft()->isData2()) //if left is full
         {
             insertLeft(root, obj); //add to left / create middle
         }
-        insert(root->getLeft(), obj); //add to left / traverse
+        else insert(root->getLeft(), obj); //add to left / traverse
     }
-    else if(obj > root->getData1() && root->getRight()) //if there are children and obj goes to right
+    else if(*obj > *root->getData1() && root->getRight()) //if there are children and obj goes to right
     {
-        if(root->getRight()->isData2()) //if right is full
+        if(root->getRight()->isData2()) //if left is full
         {
             insertRight(root, obj); //add to right / create middle
         }
-        insert(root->getRight(), obj); //add to right / traverse
+        else insert(root->getRight(), obj); //add to right / traverse
     }
     else return;
 }
@@ -243,11 +251,11 @@ void Tree::insertLeft(Node * & root, Reserved * obj)
         Node * temp = new Node;
         root->setMiddle(temp); //create new middle node
 
-        if(obj < root->getLeft()->getData1()) //check values in left node... if obj is smallest
+        if(*obj < *root->getLeft()->getData1()) //check values in left node... if obj is smallest
         {
             temp->setData1(obj); //make obj new middle
         }
-        else if(obj < root->getLeft()->getData2()) //obj is median val
+        else if(*obj < *root->getLeft()->getData2()) //obj is median val
         {
             temp->setData1(root->getLeft()->getData1()); //make middle w/val of data1
             root->getLeft()->setData1(obj); //replace leftData1 with obj
@@ -261,7 +269,7 @@ void Tree::insertLeft(Node * & root, Reserved * obj)
     }
     else
     {
-        //rotate the tree to make room
+        insert(root->getLeft(), obj); //add to the tree to make room
     }
 
 }
@@ -270,12 +278,28 @@ void Tree::insertRight(Node * & root, Reserved * obj)
 {
     if(!root->getMiddle()) //if no middle
     {
-        //if 1 or 2 data members in node
-        //if 1 then move data so that there are 2 in any node
-        //else push new middle
+        Node * temp = new Node;
+        root->setMiddle(temp); //create new middle node
+
+        if(*obj < *root->getRight()->getData1()) //check values in left node... if obj is smallest
+        {
+            temp->setData1(obj); //make obj new middle
+        }
+        else if(*obj < *root->getRight()->getData2()) //obj is median val
+        {
+            temp->setData1(root->getRight()->getData1()); //make middle w/val of data1
+            root->getRight()->setData1(obj); //replace leftData1 with obj
+        }
+        else
+        {
+            temp->setData1(root->getRight()->getData1()); //make middle data1
+            root->getRight()->setData1(root->getRight()->getData2()); //put data2 into leftData1
+            root->getRight()->setData2(obj); //put obj into old leftData2
+        }
     }
     else
     {
-        //rotate the tree to make room
+        insert(root->getRight(), obj); //add to the tree to make room
     }
 }
+
