@@ -7,6 +7,11 @@
 
 #include "Inheritance.h"
 
+#include <cstring>
+#include <iostream>
+#include <cctype>
+using namespace std;
+
 
 class Node {
 public:
@@ -52,15 +57,18 @@ public:
     void display();
     void insert(Reserved * obj);
     void removeAll();
+    int search(String input); //return default white if no match is found
 
 protected:
     Node * root;
+    Colors color;
 
     void display(Node * root);
     void removeAll(Node * root);
     void insert(Node * & root, Reserved * obj);
     void insertLeft(Node * & root, Reserved * obj);
     void insertRight(Node * & root, Reserved * obj);
+    int search(Node * root, String input);
 
 };
 

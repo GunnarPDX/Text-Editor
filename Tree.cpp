@@ -303,3 +303,28 @@ void Tree::insertRight(Node * & root, Reserved * obj)
     }
 }
 
+int Tree::search(String input)
+{
+    if(!root) return color.WHITE;
+    int val = search(root, input);
+    if(val >= 0 && val <= 37 ) return val;
+    else return color.WHITE;
+}
+
+int Tree::search(Node * root, String input)
+{
+    int val = 0;
+    if(!root) return val;
+    if(root->getData1()->getCharacters() == input) return root->getData1()->getHighlight();
+    if(root->getData2())
+    {
+        if(root->getData2()->getCharacters() == input) return root->getData2()->getHighlight();
+    }
+
+    if(input < root->getData1()->getCharacters())
+        val += search(root->getLeft(), input);
+    if(input < root->getData2()->getCharacters() && input > root->getLeft()->getData1()->getCharacters())
+
+
+    return val;
+}

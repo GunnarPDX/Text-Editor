@@ -27,6 +27,8 @@ public:
     virtual ~Reserved();
 
     virtual void print() = 0; //pure virtual func
+    int getHighlight();
+    String getCharacters();
 
     bool operator > (const Reserved & obj) const;
     bool operator < (const Reserved & obj) const;
@@ -45,6 +47,7 @@ class Word : public Reserved { // ex : "if" "return" "int" "char" "false" etc...
 public:
     Word();
     Word(const String & input);
+
     ~Word();
 
     void print();

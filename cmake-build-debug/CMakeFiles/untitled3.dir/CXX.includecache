@@ -20,13 +20,17 @@ cctype
 cstring
 -
 
+/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.cpp
+Tree.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h
+
 /Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h
 Inheritance.h
 /Users/gunnarrosenberg/CLionProjects/untitled3/Inheritance.h
-
-/Users/gunnarrosenberg/CLionProjects/untitled3/main.cpp
-Tree.h
-/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h
-sstream
+cstring
+-
+iostream
+-
+cctype
 -
 

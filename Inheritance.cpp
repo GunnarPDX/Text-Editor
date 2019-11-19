@@ -15,12 +15,19 @@ Reserved::Reserved(const String &input) : characters(input){}
 
 Reserved::Reserved(const Reserved & obj) : characters(obj.characters){}
 
-Reserved::~Reserved()
-{
-
-}
+Reserved::~Reserved(){}
 
 void Reserved::print(){}
+
+int Reserved::getHighlight()
+{
+    return highlight;
+}
+
+String Reserved::getCharacters()
+{
+    return characters;
+}
 
 //void Reserved::highlight(){}
 
