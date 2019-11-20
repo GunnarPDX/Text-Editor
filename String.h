@@ -29,6 +29,7 @@ public:
     bool operator != (const String & obj)const;
     friend ostream & operator << (ostream & obj1, const String & obj2);
     friend istream & operator >> (istream & obj1, String & obj2);
+    char * operator [] (int i);
 
 
 private:

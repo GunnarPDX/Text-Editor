@@ -225,19 +225,22 @@ void Tree::insert(Node * & root, Reserved * obj)
             root->nullifyData2(); //nullify data 2
         }
     }
-    else if(*obj < *root->getData1() && root->getLeft()) //if there are children and obj goes to left
+    else if(*obj < *root->getData1()) //if there are children and obj goes to left
     {
-        if(root->getLeft()->isData2()) //if left is full
+        if(root->getLeft() && root->getLeft()->isData2()) //if left is full
         {
             insertLeft(root, obj); //add to left / create middle
         }
         else insert(root->getLeft(), obj); //add to left / traverse
     }
-    else if(*obj > *root->getData1() && root->getRight()) //if there are children and obj goes to right
+    else if(*obj > *root->getData1()) //if there are children and obj goes to right
     {
-        if(root->getRight()->isData2()) //if left is full
+        if(root->getData2() && *obj > *root->getData1())
         {
-            insertRight(root, obj); //add to right / create middle
+            if(root->getRight() && root->getRight()->isData2()) //if left is full
+            {
+                insertRight(root, obj); //add to right / create middle
+            }
         }
         else insert(root->getRight(), obj); //add to right / traverse
     }
@@ -253,18 +256,21 @@ void Tree::insertLeft(Node * & root, Reserved * obj)
 
         if(*obj < *root->getLeft()->getData1()) //check values in left node... if obj is smallest
         {
-            temp->setData1(obj); //make obj new middle
+            temp->setData1(root->getData1());
+            root->setData1(root->getLeft()->getData2());
+            root->getLeft()->setData2(root->getLeft()->getData1());
+            root->getLeft()->setData1(obj);
+
         }
         else if(*obj < *root->getLeft()->getData2()) //obj is median val
         {
-            temp->setData1(root->getLeft()->getData1()); //make middle w/val of data1
-            root->getLeft()->setData1(obj); //replace leftData1 with obj
+            temp->setData1(root->getLeft()->getData2()); //make middle w/val of data1
+            root->getLeft()->setData2(obj); //replace leftData2 with obj
         }
         else
         {
-            temp->setData1(root->getLeft()->getData1()); //make middle data1
-            root->getLeft()->setData1(root->getLeft()->getData2()); //put data2 into leftData1
-            root->getLeft()->setData2(obj); //put obj into old leftData2
+            temp->setData1(root->getData1()); //make middle data1
+            root->setData1(obj); //set data 1 to obj
         }
     }
     else
@@ -281,18 +287,21 @@ void Tree::insertRight(Node * & root, Reserved * obj)
         Node * temp = new Node;
         root->setMiddle(temp); //create new middle node
 
-        if(*obj < *root->getRight()->getData1()) //check values in left node... if obj is smallest
+        if(*obj < *root->getRight()->getData1()) //check values in right node... if obj is smallest
         {
-            temp->setData1(obj); //make obj new middle
+            temp->setData1(root->getData1());
+            root->setData1(obj);
         }
         else if(*obj < *root->getRight()->getData2()) //obj is median val
         {
-            temp->setData1(root->getRight()->getData1()); //make middle w/val of data1
+            temp->setData1(root->getData2());
+            root->setData2(root->getRight()->getData1()); //make middle w/val of data1
             root->getRight()->setData1(obj); //replace leftData1 with obj
         }
         else
         {
-            temp->setData1(root->getRight()->getData1()); //make middle data1
+            temp->setData1(root->getData1()); //make middle data1
+            root->setData1(root->getRight()->getData1()); //set data 1 to right data1
             root->getRight()->setData1(root->getRight()->getData2()); //put data2 into leftData1
             root->getRight()->setData2(obj); //put obj into old leftData2
         }
@@ -307,7 +316,7 @@ int Tree::search(String input)
 {
     if(!root) return color.WHITE;
     int val = search(root, input);
-    if(val >= 0 && val <= 37 ) return val;
+    if(val >= 30 && val <= 37 ) return val;
     else return color.WHITE;
 }
 
@@ -323,8 +332,13 @@ int Tree::search(Node * root, String input)
 
     if(input < root->getData1()->getCharacters())
         val += search(root->getLeft(), input);
-    if(input < root->getData2()->getCharacters() && input > root->getLeft()->getData1()->getCharacters())
-
+    else if(root->getData2() && input < root->getData2()->getCharacters())
+        val += search(root->getMiddle(), input);
+    else if(input > root->getData1()->getCharacters())
+    {
+        if(root->getData2() && input < root->getData2()->getCharacters()) return val;
+        val += search(root->getRight(), input);
+    }
 
     return val;
 }

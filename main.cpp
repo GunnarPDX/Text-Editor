@@ -22,7 +22,8 @@ int main() {
 
 
     Tree tree;
-    String obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11;
+    String obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12;
+
     obj1 = "if";
     obj2 = "while";
     obj3 = "NULL";
@@ -35,6 +36,9 @@ int main() {
     obj10 = "//";
     obj11 = "zzzz";
 
+    obj12 = "==";
+
+
     Reserved * ptr1 = new Word(obj1);
     Reserved * ptr2 = new Word(obj2);
     Reserved * ptr3 = new Symbol(obj3, 2);
@@ -46,20 +50,21 @@ int main() {
     Reserved * ptr9 = new Comment(obj9);
     Reserved * ptr10 = new Comment(obj10);
     Reserved * ptr11 = new Word(obj11);
+    Reserved * ptr12 = new Word(obj12);
 
+    tree.insert(ptr2);
+    tree.insert(ptr11);
     tree.insert(ptr4);
     tree.insert(ptr5);
     tree.insert(ptr6);
     tree.insert(ptr3);
-    tree.insert(ptr1);
-    tree.insert(ptr8);
     tree.insert(ptr9);
     tree.insert(ptr10);
     tree.insert(ptr7);
-    tree.insert(ptr2);
-    tree.insert(ptr11);
+    tree.insert(ptr1);
+    tree.insert(ptr8);
 
-
+    cout << obj12 << " highlight: " << tree.search(obj12) << endl << endl;
     tree.display();
 
 
