@@ -36,7 +36,7 @@ int main() {
     obj10 = "//";
     obj11 = "zzzz";
 
-    obj12 = "==";
+    obj12 = "NULL";
 
 
     Reserved * ptr1 = new Word(obj1);

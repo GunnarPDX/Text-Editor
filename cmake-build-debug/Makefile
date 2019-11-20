@@ -150,6 +150,33 @@ Inheritance.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Inheritance.cpp.s
 .PHONY : Inheritance.cpp.s
 
+List.o: List.cpp.o
+
+.PHONY : List.o
+
+# target to build an object file
+List.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/List.cpp.o
+.PHONY : List.cpp.o
+
+List.i: List.cpp.i
+
+.PHONY : List.i
+
+# target to preprocess a source file
+List.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/List.cpp.i
+.PHONY : List.cpp.i
+
+List.s: List.cpp.s
+
+.PHONY : List.s
+
+# target to generate assembly for a file
+List.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/List.cpp.s
+.PHONY : List.cpp.s
+
 String.o: String.cpp.o
 
 .PHONY : String.o
@@ -243,6 +270,9 @@ help:
 	@echo "... Inheritance.o"
 	@echo "... Inheritance.i"
 	@echo "... Inheritance.s"
+	@echo "... List.o"
+	@echo "... List.i"
+	@echo "... List.s"
 	@echo "... String.o"
 	@echo "... String.i"
 	@echo "... String.s"
