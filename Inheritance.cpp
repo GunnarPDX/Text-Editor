@@ -4,7 +4,11 @@
 
 #include "Inheritance.h"
 
+
+
 //Reserved class methods
+
+
 
 Reserved::Reserved()
 {
@@ -28,8 +32,6 @@ String Reserved::getCharacters()
 {
     return characters;
 }
-
-//void Reserved::highlight(){}
 
 bool Reserved::operator > (const Reserved & obj)const
 {
@@ -74,7 +76,10 @@ bool Reserved::operator != (const Reserved & obj)const
 }
 
 
+
 //Word class methods
+
+
 
 Word::Word() : Reserved()
 {
@@ -93,7 +98,11 @@ void Word::print()
     cout << "\x1B[" << highlight << "m" << characters <<"\033[0m\t\t" << endl;
 }
 
+
+
 //Symbol class methods
+
+
 
 Symbol::Symbol() : Reserved()
 {
@@ -128,7 +137,11 @@ void Symbol::print()
     cout << "\x1B[" << highlight << "m" << characters <<"\033[0m\t\t" << endl;
 }
 
+
+
 //Comment class methods
+
+
 
 Comment::Comment() : Reserved()
 {

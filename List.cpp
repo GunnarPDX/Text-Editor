@@ -5,38 +5,34 @@
 #include "List.h"
 
 
-Text::Text()
+Text::Text() : highlight(30)
 {
-
+    word = NULL;
 }
 
-Text::Text(String word)
-{
+Text::Text(String word) : word(word), highlight(30){}
 
-}
-
-Text::Text(const Text & obj)
-{
-
-}
+Text::Text(const Text & obj) : word(obj.word), highlight(obj.highlight){}
 
 Text::~Text()
 {
-
+    word = NULL;
 }
 
 void Text::print()
 {
-
+    cout << "\x1B[" << highlight << "m" << word <<"\033[0m\t\t" << " ";
 }
 
 void Text::setHighlight(int color)
 {
-
+    highlight = color;
 }
 
 
+
 //- list node class methods
+
 
 
 ListNode::ListNode() //default constructor

@@ -6,6 +6,8 @@
 
 //Node class members
 
+
+
 Node::Node()
 {
     data1 = NULL;
@@ -110,7 +112,11 @@ void Node::setRight(Node * newNode)
     right = newNode;
 }
 
+
+
 //Tree class members
+
+
 
 Tree::Tree()
 {
