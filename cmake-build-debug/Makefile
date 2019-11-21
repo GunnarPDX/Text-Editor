@@ -231,6 +231,33 @@ Tree.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Tree.cpp.s
 .PHONY : Tree.cpp.s
 
+controller.o: controller.cpp.o
+
+.PHONY : controller.o
+
+# target to build an object file
+controller.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.o
+.PHONY : controller.cpp.o
+
+controller.i: controller.cpp.i
+
+.PHONY : controller.i
+
+# target to preprocess a source file
+controller.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.i
+.PHONY : controller.cpp.i
+
+controller.s: controller.cpp.s
+
+.PHONY : controller.s
+
+# target to generate assembly for a file
+controller.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.s
+.PHONY : controller.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... Tree.o"
 	@echo "... Tree.i"
 	@echo "... Tree.s"
+	@echo "... controller.o"
+	@echo "... controller.i"
+	@echo "... controller.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

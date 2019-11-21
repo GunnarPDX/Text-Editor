@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/gunnarrosenberg/CLionProjects/untitled3/List.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/List.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/String.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/String.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/Tree.cpp.o"
+  "/Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/controller.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/main.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

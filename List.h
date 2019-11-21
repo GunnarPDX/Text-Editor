@@ -48,7 +48,7 @@ private:
 
 class List {
 public:
-    List(int i);
+    List(int size);
     ~List();
 
     bool insert(int i, Text * obj);

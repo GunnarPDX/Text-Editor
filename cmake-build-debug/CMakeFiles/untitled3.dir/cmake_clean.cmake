@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled3.dir/Inheritance.cpp.o"
   "CMakeFiles/untitled3.dir/String.cpp.o"
   "CMakeFiles/untitled3.dir/List.cpp.o"
+  "CMakeFiles/untitled3.dir/controller.cpp.o"
   "untitled3.pdb"
   "untitled3"
 )
