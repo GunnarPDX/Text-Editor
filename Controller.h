@@ -14,15 +14,15 @@ using namespace std;
 
 class Controller {
 public:
-    Controller(int size);
-    ~Controller();
+    Controller(int size); //constructor
+    ~Controller(); //destructor
 
-    void program();
+    void program(); //cli for program
 
 private:
-    Tree tree;
-    List list;
-    Colors highlights;
+    Tree tree; //2-3 tree obj
+    List list; //table obj
+    Colors highlights; //colors obj
 
     void insertReserved();
     void insertText();
@@ -33,4 +33,4 @@ private:
 };
 
 
-#endif //UNTITLED3_CONTROLLER_H
+#endif

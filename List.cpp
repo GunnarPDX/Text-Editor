@@ -168,7 +168,7 @@ void List::removeAllLoop(int i) //recursive remove all loop
     removeAllLoop(++i);
 }
 
-void List::removeAll(ListNode *& head) //remove dll
+void List::removeAll(ListNode *& head) //remove
 {
     if(!head) return;
     removeAll(head->getNext());

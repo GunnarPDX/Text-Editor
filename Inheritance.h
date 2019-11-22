@@ -9,7 +9,7 @@
 
 class Colors {
 public:
-    const int WHITE = 30;
+    const int WHITE = 30; //highlight colors
     const int RED = 31;
     const int GREEN = 32;
     const int YELLOW = 33;
@@ -18,41 +18,42 @@ public:
     const int CYAN = 36;
     const int GREY = 37;
 
-    int colorPicker();
+    int colorPicker(); //returns a color
 };
 
 class Reserved {
 public:
-    Reserved();
+    Reserved(); //constructors
     Reserved(const String & input);
     Reserved(const Reserved & obj);
-    virtual ~Reserved();
+    virtual ~Reserved(); //destructor
 
     virtual void print() = 0; //pure virtual func
     int getHighlight();
     String getCharacters();
 
-    bool operator > (const Reserved & obj) const;
-    bool operator < (const Reserved & obj) const;
+    //overloaded operators
+    bool operator > (const Reserved & obj) const; //checks if data is larger for 2-3 tree...
+    bool operator < (const Reserved & obj) const; //these all just do what the operators normally do
     bool operator >= (const Reserved & obj) const;
     bool operator <= (const Reserved & obj) const;
     bool operator == (const Reserved & obj) const;
     bool operator != (const Reserved & obj) const;
 
 protected:
-    Colors color;
-    String characters;
-    int highlight;
+    Colors color; //color obj
+    String characters; //reserved characters
+    int highlight; //highlight color
 };
 
 class Word : public Reserved { // ex : "if" "return" "int" "char" "false" etc...
 public:
-    Word();
-    Word(const String & input);
+    Word(); //constructor
+    Word(const String & input); //copy constructor
 
-    ~Word();
+    ~Word(); //destructor
 
-    void print();
+    void print(); //display method
 
 private:
 
@@ -60,13 +61,13 @@ private:
 
 class Symbol : public Reserved { // ex : ; + - = == != && etc...
 public:
-    Symbol();
+    Symbol(); //constructors
     Symbol(const String & input, int color);
 
-    ~Symbol();
+    ~Symbol(); //destructor
 
-    void print();
-    int getColor(int input);
+    void print(); //display method
+    int getColor(int input); //color selector
 
 private:
 
@@ -74,13 +75,13 @@ private:
 
 class Comment : public Reserved { // can be : " //... " or " /* ... */ "
 public:
-    Comment();
+    Comment(); //constructor
     Comment(String input);
-    Comment(int size);
+    //Comment(int size); //length of comment, not used
 
-    ~Comment();
+    ~Comment(); //destructor
 
-    void print();
+    void print(); //display mehtod
 
 private:
 
