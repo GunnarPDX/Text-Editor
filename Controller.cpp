@@ -154,7 +154,7 @@ void Controller::insertText(int i)
         int highlight = tree.search(splitInput);
 
         Text * ptr = new Text(splitInput, highlight);
-        list.insert(1, ptr);
+        list.insert(i, ptr);
 
         split = strtok(NULL, " ");
     }
@@ -190,7 +190,6 @@ void Controller::test()
     Reserved * ptr9 = new Comment(obj9);
     Reserved * ptr10 = new Comment(obj10);
     Reserved * ptr11 = new Word(obj11);
-    Reserved * ptr12 = new Word(obj12);
 
     tree.insert(ptr2);
     tree.insert(ptr11);
