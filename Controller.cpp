@@ -130,14 +130,15 @@ void Controller::insertReserved()
 
 void Controller::insertText()
 {
+    cout << "Enter text: " << endl;
     insertText(0);
 }
 
 void Controller::insertText(int i)
 {
     if(i == list.getSize())return;
+
     char textInput[100];
-    cout << "Enter text: " << endl;
     cout << i << ": ";
     cin.get(textInput, 100, '\n');
     cin.ignore(101, '\n');
@@ -158,6 +159,7 @@ void Controller::insertText(int i)
 
         split = strtok(NULL, " ");
     }
+    insertText(++i);
 }
 
 
