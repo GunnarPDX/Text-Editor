@@ -64,7 +64,7 @@ protected:
     Colors color;
 
     void display(Node * root);
-    void removeAll(Node * root);
+    void removeAll(Node *& root);
     void insert(Node * & root, Reserved * obj);
     void insertLeft(Node * & root, Reserved * obj);
     void insertRight(Node * & root, Reserved * obj);

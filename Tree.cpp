@@ -159,7 +159,7 @@ void Tree::removeAll()
     root = NULL;
 }
 
-void Tree::removeAll(Node * root)
+void Tree::removeAll(Node *& root)
 {
     if(!root) return;
     removeAll(root->getLeft());

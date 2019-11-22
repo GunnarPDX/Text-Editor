@@ -4,7 +4,6 @@
 
 #include "Controller.h"
 
-#include <sstream> //input delimitation
 
 int main() {
 

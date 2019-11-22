@@ -68,7 +68,7 @@ void Controller::menu()
          << endl << endl
          << " 1- Enter a reserved word/symbol or comment" << endl
          << " 2- Display all reserved words" << endl
-         << " 3- Run 2-3 tree test" << endl
+         << " 3- Run 2-3 tree test (preload data)" << endl
          << " 4- Insert text" << endl
          << " 5- Display text" << endl
          << " 6- Remove all" << endl
