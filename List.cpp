@@ -198,3 +198,8 @@ void List::display(ListNode * head)
     display(head->getNext());
 }
 
+int List::getSize()
+{
+    return size;
+}
+

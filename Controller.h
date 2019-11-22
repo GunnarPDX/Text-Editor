@@ -26,6 +26,7 @@ private:
 
     void insertReserved();
     void insertText();
+    void insertText(int i);
     void test();
     void menu();
 

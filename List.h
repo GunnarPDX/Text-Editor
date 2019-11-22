@@ -55,6 +55,7 @@ public:
     void removeAll();
     void removeAllLoop(int i);
     void display();
+    int getSize();
 
 private:
     int size;

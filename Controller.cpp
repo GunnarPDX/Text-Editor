@@ -130,8 +130,15 @@ void Controller::insertReserved()
 
 void Controller::insertText()
 {
+    insertText(0);
+}
+
+void Controller::insertText(int i)
+{
+    if(i == list.getSize())return;
     char textInput[100];
-    cout << "Enter text: ";
+    cout << "Enter text: " << endl;
+    cout << i << ": ";
     cin.get(textInput, 100, '\n');
     cin.ignore(101, '\n');
     cin.clear();
@@ -141,12 +148,12 @@ void Controller::insertText()
 
     while(split)
     {
-        String input;
-        input = split;
+        String splitInput;
+        splitInput = split;
 
-        int highlight = tree.search(input);
+        int highlight = tree.search(splitInput);
 
-        Text * ptr = new Text(input, highlight);
+        Text * ptr = new Text(splitInput, highlight);
         list.insert(1, ptr);
 
         split = strtok(NULL, " ");
