@@ -30,6 +30,7 @@ public:
     friend ostream & operator << (ostream & obj1, const String & obj2);
     friend istream & operator >> (istream & obj1, String & obj2);
     String operator [] (int i);
+    char * getStr();
 
 
 private:

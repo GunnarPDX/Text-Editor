@@ -14,13 +14,13 @@ void Controller::program()
     int input = 0;
 
     do{
-        //call menu
+        menu();
 
         cin >> input;
         cin.ignore(100, '\n');
         cin.clear();
 
-        if(input < 0 || input > 4) cout << " Invalid Entry " << endl;
+        if(input < 0 || input > 6) cout << " Invalid Entry " << endl;
         else switch(input)
         {
             case 0:
@@ -41,6 +41,14 @@ void Controller::program()
             }break;
             case 4:
             {
+                insertText();
+            }break;
+            case 5:
+            {
+                list.display();
+            }break;
+            case 6:
+            {
                 tree.removeAll();
                 list.removeAll();
             }break;
@@ -52,6 +60,20 @@ void Controller::program()
         }
     }while(input != 0);
 
+}
+
+void Controller::menu()
+{
+    cout << endl << endl << "          -MENU-"
+         << endl << endl
+         << " 1- Enter a reserved word/symbol or comment" << endl
+         << " 2- Display all reserved words" << endl
+         << " 3- Run 2-3 tree test" << endl
+         << " 4- Insert text" << endl
+         << " 5- Display text" << endl
+         << " 6- Remove all" << endl
+         << " 0- Exit program" << endl << endl
+         << " Select an operation (0-4): ";
 }
 
 void Controller::insertReserved()
@@ -108,8 +130,30 @@ void Controller::insertReserved()
 
 void Controller::insertText()
 {
+    char textInput[100];
+    cout << "Enter text: ";
+    cin.get(textInput, 100, '\n');
+    cin.ignore(101, '\n');
+    cin.clear();
 
+    char * split;
+    split = strtok(textInput," ");
+
+    while(split)
+    {
+        String input;
+        input = split;
+
+        int highlight = tree.search(input);
+
+        Text * ptr = new Text(input, highlight);
+        list.insert(1, ptr);
+
+        split = strtok(NULL, " ");
+    }
 }
+
+
 
 void Controller::test()
 {
@@ -126,8 +170,6 @@ void Controller::test()
     obj9 = "/* */";
     obj10 = "//";
     obj11 = "zzzz";
-
-    obj12 = "NULL";
 
 
     Reserved * ptr1 = new Word(obj1);

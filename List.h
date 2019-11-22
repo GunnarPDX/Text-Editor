@@ -14,7 +14,7 @@ using namespace std;
 class Text {
 public:
     Text();
-    Text(String word);
+    Text(const String & word, int highlight);
     Text(const Text & obj);
     ~Text();
 
@@ -54,6 +54,7 @@ public:
     bool insert(int i, Text * obj);
     void removeAll();
     void removeAllLoop(int i);
+    void display();
 
 private:
     int size;
@@ -62,6 +63,8 @@ private:
     bool insert(ListNode *& head, Text * obj);
     void deleteAll(ListNode *& head);
     void removeAll(ListNode * & head);
+    void displayLoop(int i);
+    void display(ListNode * head);
 
 };
 

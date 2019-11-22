@@ -13,15 +13,15 @@ int Colors::colorPicker()
 {
     cout << endl
          << "  -Select a Color-    " << endl
-         << "\x1B[" << 30 << "m" << "1  = White" << "\033[0m\t\t" << endl
-         << "\x1B[" << 31 << "m" << "2  = Red" << "\033[0m\t\t" << endl
-         << "\x1B[" << 32 << "m" << "3  = Green" << "\033[0m\t\t" << endl
-         << "\x1B[" << 33 << "m" << "4  = Yellow" << "\033[0m\t\t" << endl
-         << "\x1B[" << 34 << "m" << "5  = Blue" << "\033[0m\t\t" << endl
-         << "\x1B[" << 35 << "m" << "6  = Purple" << "\033[0m\t\t" << endl
-         << "\x1B[" << 36 << "m" << "7  = Cyan" << "\033[0m\t\t" << endl
-         << "\x1B[" << 37 << "m" << "8  = Grey" << "\033[0m\t\t" << endl
-         << "Enter your selection: ";
+         << "\x1B[" << 30 << "m" << "1  = White" << "\033[0m" << endl
+         << "\x1B[" << 31 << "m" << "2  = Red" << "\033[0m" << endl
+         << "\x1B[" << 32 << "m" << "3  = Green" << "\033[0m" << endl
+         << "\x1B[" << 33 << "m" << "4  = Yellow" << "\033[0m" << endl
+         << "\x1B[" << 34 << "m" << "5  = Blue" << "\033[0m" << endl
+         << "\x1B[" << 35 << "m" << "6  = Purple" << "\033[0m" << endl
+         << "\x1B[" << 36 << "m" << "7  = Cyan" << "\033[0m" << endl
+         << "\x1B[" << 37 << "m" << "8  = Grey" << "\033[0m" << endl
+            << "Enter your selection: ";
 
     int input = 0;
     cin >> input;
@@ -126,7 +126,7 @@ Word::~Word(){}
 
 void Word::print()
 {
-    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m\t\t" << endl;
+    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m" << endl;
 }
 
 
@@ -165,7 +165,7 @@ Symbol::~Symbol(){}
 
 void Symbol::print()
 {
-    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m\t\t" << endl;
+    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m" << endl;
 }
 
 
@@ -188,5 +188,5 @@ Comment::~Comment(){}
 
 void Comment::print()
 {
-    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m\t\t" << endl;
+    cout << "\x1B[" << highlight << "m" << characters <<"\033[0m" << endl;
 }

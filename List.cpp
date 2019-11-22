@@ -10,7 +10,7 @@ Text::Text() : highlight(30)
     word = NULL;
 }
 
-Text::Text(String word) : word(word), highlight(30){}
+Text::Text(const String & word, int highlight) : word(word), highlight(highlight){}
 
 Text::Text(const Text & obj) : word(obj.word), highlight(obj.highlight){}
 
@@ -21,7 +21,7 @@ Text::~Text()
 
 void Text::print()
 {
-    cout << "\x1B[" << highlight << "m" << word <<"\033[0m\t\t" << " ";
+    cout << "\x1B[" << highlight << "m" << word <<"\033[0m" << " ";
 }
 
 void Text::setHighlight(int color)
@@ -175,3 +175,26 @@ void List::removeAll(ListNode *& head) //remove dll
     //remove(head);
     head = NULL;
 }
+
+void List::display()
+{
+    return displayLoop(0);
+}
+
+void List::displayLoop(int i) //recursive display loop
+{
+    if(i >= size) return;
+    cout << i << ": ";
+    display(head[i]);
+    cout << endl;
+    displayLoop(++i);
+}
+
+void List::display(ListNode * head)
+{
+    if(!head) return;
+
+    head->getData()->print();
+    display(head->getNext());
+}
+

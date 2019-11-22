@@ -8,6 +8,7 @@
 #include "Tree.h"
 #include "List.h"
 #include "String.h"
+#include <cstring>
 using namespace std;
 
 
@@ -26,6 +27,7 @@ private:
     void insertReserved();
     void insertText();
     void test();
+    void menu();
 
 };
 

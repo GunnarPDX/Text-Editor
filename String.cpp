@@ -100,3 +100,8 @@ istream & operator >> (istream & obj1, String & obj2)
     strcpy(obj2.string, temp);
     return obj1;
 }
+
+char * String::getStr()
+{
+    return string;
+}
