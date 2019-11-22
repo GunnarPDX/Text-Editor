@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// list.cpp
+// this file includes all of the ARR list, listnode and text methods
 
 #include "List.h"
 

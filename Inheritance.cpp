@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// inheritance.cpp
+// this file contains all of the reserved class and color class methods
 
 #include "Inheritance.h"
 

@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// tree.cpp
+// this file includes all of the 2-3 tree and tree-node class methods
 
 #include "Tree.h"
 

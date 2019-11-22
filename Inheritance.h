@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// inheritance.h
+// this is the inheritance.h file, it contains all fo the color and reserved classes member/method definitions
 
 #ifndef INHERITANCE_H
 #define INHERITANCE_H

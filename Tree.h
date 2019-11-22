@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// tree.h
+// this file includes all of the 2-3 tree and tree-node class member/method definitions
 
 #ifndef TREE_H
 #define TREE_H

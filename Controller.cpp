@@ -1,6 +1,8 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// controller.cpp
+// this file includes all of the controller class methods
 
 #include "Controller.h"
 
@@ -16,7 +18,7 @@ void Controller::program()
     do{
         menu();
 
-        cin >> input;
+        cin >> input; //menu selection
         cin.ignore(100, '\n');
         cin.clear();
 
@@ -78,9 +80,13 @@ void Controller::menu()
 
 void Controller::insertReserved()
 {
-    //cout select an option...
+    cout << "select an option" << endl
+            << " 1- Enter a reserved word" << endl
+            << " 2- Enter a reserved symbol" << endl
+            << " 3- Enter a comment" << endl
+            << "Select an option (1-3): ";
 
-    int input = 0;
+    int input = 0; //menu selection
     cin >> input;
     cin.ignore(100, '\n');
     cin.clear();
@@ -145,7 +151,7 @@ void Controller::insertText(int i)
     cin.clear();
 
     char * split;
-    split = strtok(textInput," ");
+    split = strtok(textInput," "); //use strtok() to "tokenize" (split) the string
 
     while(split)
     {
@@ -155,9 +161,9 @@ void Controller::insertText(int i)
         int highlight = tree.search(splitInput);
 
         Text * ptr = new Text(splitInput, highlight);
-        list.insert(i, ptr);
+        list.insert(i, ptr); //input tokenized words into table
 
-        split = strtok(NULL, " ");
+        split = strtok(NULL, " "); //next token
     }
     insertText(++i);
 }

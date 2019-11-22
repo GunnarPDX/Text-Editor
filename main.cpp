@@ -1,9 +1,10 @@
 // Carl Gunnar Rosenberg
 // CS 202
 //
+// main.cpp
+// this is my programs main, it pretty much just builds and calls the program method of the controller class
 
 #include "Controller.h"
-
 
 int main() {
 
