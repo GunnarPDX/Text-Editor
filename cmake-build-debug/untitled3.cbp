@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/Controller.cpp">
+			<Option target="untitled3"/>
+		</Unit>
+		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/Controller.h">
+			<Option target="untitled3"/>
+		</Unit>
 		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/Inheritance.cpp">
 			<Option target="untitled3"/>
 		</Unit>
@@ -104,12 +110,6 @@
 			<Option target="untitled3"/>
 		</Unit>
 		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h">
-			<Option target="untitled3"/>
-		</Unit>
-		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp">
-			<Option target="untitled3"/>
-		</Unit>
-		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/controller.h">
 			<Option target="untitled3"/>
 		</Unit>
 		<Unit filename="/Users/gunnarrosenberg/CLionProjects/untitled3/main.cpp">

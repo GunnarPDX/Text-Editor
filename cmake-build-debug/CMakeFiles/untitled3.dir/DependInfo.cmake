@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/gunnarrosenberg/CLionProjects/untitled3/Controller.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/Controller.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/Inheritance.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/Inheritance.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/List.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/List.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/String.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/String.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/Tree.cpp.o"
-  "/Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/controller.cpp.o"
   "/Users/gunnarrosenberg/CLionProjects/untitled3/main.cpp" "/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles/untitled3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

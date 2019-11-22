@@ -122,18 +122,18 @@ CMakeFiles/untitled3.dir/List.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled3.dir/List.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gunnarrosenberg/CLionProjects/untitled3/List.cpp -o CMakeFiles/untitled3.dir/List.cpp.s
 
-CMakeFiles/untitled3.dir/controller.cpp.o: CMakeFiles/untitled3.dir/flags.make
-CMakeFiles/untitled3.dir/controller.cpp.o: ../controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled3.dir/controller.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled3.dir/controller.cpp.o -c /Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp
+CMakeFiles/untitled3.dir/Controller.cpp.o: CMakeFiles/untitled3.dir/flags.make
+CMakeFiles/untitled3.dir/Controller.cpp.o: ../Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled3.dir/Controller.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled3.dir/Controller.cpp.o -c /Users/gunnarrosenberg/CLionProjects/untitled3/Controller.cpp
 
-CMakeFiles/untitled3.dir/controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled3.dir/controller.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp > CMakeFiles/untitled3.dir/controller.cpp.i
+CMakeFiles/untitled3.dir/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled3.dir/Controller.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gunnarrosenberg/CLionProjects/untitled3/Controller.cpp > CMakeFiles/untitled3.dir/Controller.cpp.i
 
-CMakeFiles/untitled3.dir/controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled3.dir/controller.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gunnarrosenberg/CLionProjects/untitled3/controller.cpp -o CMakeFiles/untitled3.dir/controller.cpp.s
+CMakeFiles/untitled3.dir/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled3.dir/Controller.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gunnarrosenberg/CLionProjects/untitled3/Controller.cpp -o CMakeFiles/untitled3.dir/Controller.cpp.s
 
 # Object files for target untitled3
 untitled3_OBJECTS = \
@@ -142,7 +142,7 @@ untitled3_OBJECTS = \
 "CMakeFiles/untitled3.dir/Inheritance.cpp.o" \
 "CMakeFiles/untitled3.dir/String.cpp.o" \
 "CMakeFiles/untitled3.dir/List.cpp.o" \
-"CMakeFiles/untitled3.dir/controller.cpp.o"
+"CMakeFiles/untitled3.dir/Controller.cpp.o"
 
 # External object files for target untitled3
 untitled3_EXTERNAL_OBJECTS =
@@ -152,7 +152,7 @@ untitled3: CMakeFiles/untitled3.dir/Tree.cpp.o
 untitled3: CMakeFiles/untitled3.dir/Inheritance.cpp.o
 untitled3: CMakeFiles/untitled3.dir/String.cpp.o
 untitled3: CMakeFiles/untitled3.dir/List.cpp.o
-untitled3: CMakeFiles/untitled3.dir/controller.cpp.o
+untitled3: CMakeFiles/untitled3.dir/Controller.cpp.o
 untitled3: CMakeFiles/untitled3.dir/build.make
 untitled3: CMakeFiles/untitled3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gunnarrosenberg/CLionProjects/untitled3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable untitled3"

@@ -6,10 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/Users/gunnarrosenberg/CLionProjects/untitled3/Controller.h
+Tree.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h
+List.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/List.h
+String.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/String.h
+
 /Users/gunnarrosenberg/CLionProjects/untitled3/Inheritance.h
 String.h
 /Users/gunnarrosenberg/CLionProjects/untitled3/String.h
 cstring
+-
+
+/Users/gunnarrosenberg/CLionProjects/untitled3/List.h
+String.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/String.h
+cstring
+-
+iostream
+-
+cctype
 -
 
 /Users/gunnarrosenberg/CLionProjects/untitled3/String.h
@@ -31,8 +49,8 @@ cctype
 -
 
 /Users/gunnarrosenberg/CLionProjects/untitled3/main.cpp
-Tree.h
-/Users/gunnarrosenberg/CLionProjects/untitled3/Tree.h
+Controller.h
+/Users/gunnarrosenberg/CLionProjects/untitled3/Controller.h
 sstream
 -
 

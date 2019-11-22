@@ -17,6 +17,8 @@ public:
     const int PURPLE = 35;
     const int CYAN = 36;
     const int GREY = 37;
+
+    int colorPicker();
 };
 
 class Reserved {

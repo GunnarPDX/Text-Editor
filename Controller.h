@@ -17,11 +17,16 @@ public:
     ~Controller();
 
     void program();
-    void insert();
 
 private:
     Tree tree;
     List list;
+    Colors highlights;
+
+    void insertReserved();
+    void insertText();
+    void test();
+
 };
 
 

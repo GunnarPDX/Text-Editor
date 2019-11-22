@@ -123,6 +123,33 @@ untitled3/fast:
 	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/build
 .PHONY : untitled3/fast
 
+Controller.o: Controller.cpp.o
+
+.PHONY : Controller.o
+
+# target to build an object file
+Controller.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Controller.cpp.o
+.PHONY : Controller.cpp.o
+
+Controller.i: Controller.cpp.i
+
+.PHONY : Controller.i
+
+# target to preprocess a source file
+Controller.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Controller.cpp.i
+.PHONY : Controller.cpp.i
+
+Controller.s: Controller.cpp.s
+
+.PHONY : Controller.s
+
+# target to generate assembly for a file
+Controller.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Controller.cpp.s
+.PHONY : Controller.cpp.s
+
 Inheritance.o: Inheritance.cpp.o
 
 .PHONY : Inheritance.o
@@ -231,33 +258,6 @@ Tree.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/Tree.cpp.s
 .PHONY : Tree.cpp.s
 
-controller.o: controller.cpp.o
-
-.PHONY : controller.o
-
-# target to build an object file
-controller.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.o
-.PHONY : controller.cpp.o
-
-controller.i: controller.cpp.i
-
-.PHONY : controller.i
-
-# target to preprocess a source file
-controller.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.i
-.PHONY : controller.cpp.i
-
-controller.s: controller.cpp.s
-
-.PHONY : controller.s
-
-# target to generate assembly for a file
-controller.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled3.dir/build.make CMakeFiles/untitled3.dir/controller.cpp.s
-.PHONY : controller.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -294,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled3"
+	@echo "... Controller.o"
+	@echo "... Controller.i"
+	@echo "... Controller.s"
 	@echo "... Inheritance.o"
 	@echo "... Inheritance.i"
 	@echo "... Inheritance.s"
@@ -306,9 +309,6 @@ help:
 	@echo "... Tree.o"
 	@echo "... Tree.i"
 	@echo "... Tree.s"
-	@echo "... controller.o"
-	@echo "... controller.i"
-	@echo "... controller.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
