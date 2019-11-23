@@ -1,8 +1,5 @@
 // Carl Gunnar Rosenberg
-// CS 202
-//
-// controller.cpp
-// this file includes all of the controller class methods
+
 
 #include "Controller.h"
 

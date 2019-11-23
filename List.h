@@ -1,8 +1,5 @@
 // Carl Gunnar Rosenberg
-// CS 202
-//
-// list.h
-// this file includes all of the ARR list, listnode and text member/method definitions
+
 
 #ifndef LIST_H
 #define LIST_H

@@ -1,8 +1,5 @@
 // Carl Gunnar Rosenberg
-// CS 202
-//
-// controller.h
-// this file includes all of the controller class member/method definitions
+
 
 #ifndef CONTROLLER_H
 #define CONTROLLER_H

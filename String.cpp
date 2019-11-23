@@ -1,9 +1,5 @@
 // Carl Gunnar Rosenberg
-// CS 202
-//
-// String.cpp
-//
-// A string class based off of Karla's "kstring" demo class
+
 
 #include "String.h"
 

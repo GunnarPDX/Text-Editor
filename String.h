@@ -1,9 +1,5 @@
 // Carl Gunnar Rosenberg
-// CS 202
-//
-// String.h
-//
-// A string class based off of Karla's "kstring" demo class
+
 
 #ifndef STRING_H
 #define STRING_H
